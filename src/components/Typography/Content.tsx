@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import MainHeading from './MainHeading';
+import Heading from './Heading';
 import Paragraph from './Paragraph';
 
 type Props = {
@@ -11,9 +11,9 @@ type Props = {
 const Content = ({heading, paragraph}: Props) => {
   return (
     <ContentContainer>
-      <MainHeading>
+      <Heading variant="h1">
         {heading}
-      </MainHeading>
+      </Heading>
       <Paragraph color="light">
         {paragraph}
       </Paragraph>
