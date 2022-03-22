@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../components/Button/Button";
-import Content from "../components/Typography/Content";
+import Button from "../../../components/Button/Button";
+import Content from "../../../components/Typography/Content";
+import HeroImage from "./HeroImage";
 
 type Props = {};
 
@@ -18,18 +19,21 @@ const Hero = (props: Props) => {
     <StyledHero>
       <Content heading={ heading } paragraph={ paragraph } />
       <Button to="/about" variant="light">Learn More</Button>
+      <HeroImage />
     </StyledHero>
   );
 };
 
 const StyledHero = styled.section`
+  align-items: center;
   background-color: ${(props) => props.theme.colors.primary.main};
-  padding: 5rem 6.4% 40.3125rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
+  justify-content: center;
+  padding: 5rem 6.4% 28rem;
+  position: relative;
+  overflow: hidden;
 `;
 
 export default Hero;
