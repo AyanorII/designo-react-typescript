@@ -13,16 +13,6 @@ export type ThemeType = {
       light: string,
     }
   }
-  typography: {
-    heading: {
-      fontFamily: string,
-      fontWeight: string | number
-    },
-    body: {
-      fontFamily: string,
-      fontWeight: string | number
-    },
-  }
 }
 
 const theme: ThemeType = {
@@ -38,15 +28,5 @@ const theme: ThemeType = {
       light: "#F1F3F5",
     },
   },
-  typography: {
-    heading: {
-      fontFamily: "Jost, sans-serif",
-      fontWeight: "medium",
-    },
-    body: {
-      fontFamily: "Jost, sans-serif",
-      fontWeight: "regular",
-    }
-  }
 };
 export default theme

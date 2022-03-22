@@ -20,7 +20,7 @@ const StyledNav = styled.nav<NavProps>`
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateY(${props => props.isNavOpen ? "100px" : "-400px"});
+  transform: translateY(${props => props.isNavOpen ? "108px" : "-400px"});
   transition: transform 0.35s ease-in-out;
 
 `;

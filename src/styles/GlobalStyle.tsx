@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
   body {
-    margin: 0;
-    padding: 0;
     font-family: "Jost", sans-serif;
-    box-sizing: border-box;
   }
 
   *, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     box-sizing: inherit;
   }
 
