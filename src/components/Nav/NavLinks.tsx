@@ -1,10 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
-interface LinkInterface {
-  text: string;
-  href: string;
-}
+import LinkInterface from "../../modules/interfaces/LinkInterface";
 
 const links: LinkInterface[] = [
   {
