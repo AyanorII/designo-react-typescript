@@ -1,4 +1,3 @@
-import React from 'react'
 import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
@@ -15,5 +14,13 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
   }
 `
