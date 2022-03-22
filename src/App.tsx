@@ -5,6 +5,7 @@ import theme from "./styles/theme";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </ThemeProvider>
