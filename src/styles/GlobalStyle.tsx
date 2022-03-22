@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   body {
@@ -23,4 +23,8 @@ export default createGlobalStyle`
     background: none;
     outline: none;
   }
-`
+
+  ul, li, ol {
+    list-style: none;
+  }
+`;
