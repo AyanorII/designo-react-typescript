@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import HeadingInterface from "../../modules/interfaces/HeadingInterface";
 
-interface Props {
-  children: string;
-  variant: "h1" | "h2";
-  color?: "dark" | "primary";
-}
-
-const Heading = ({ children, variant }: Props) => {
+const Heading = ({ children, variant, color }: HeadingInterface) => {
   return variant === "h1" ? (
-    <StyledH1 variant={variant}>{children}</StyledH1>
+    <StyledH1 variant={variant} color={color}>
+      {children}
+    </StyledH1>
   ) : (
-    <StyledH2 variant={variant}>{children}</StyledH2>
+    <StyledH2 variant={variant} color={color}>
+      {children}
+    </StyledH2>
   );
 };
 
-const StyledH1 = styled.h1<Props>`
+const StyledH1 = styled.h1<HeadingInterface>`
   color: ${(props) => props.theme.colors.primary.light};
   font-size: 2rem;
   font-weight: normal;
@@ -23,11 +22,11 @@ const StyledH1 = styled.h1<Props>`
   text-align: center;
 `;
 
-const StyledH2 = styled.h2<Props>`
+const StyledH2 = styled.h2<HeadingInterface>`
   color: ${(props) =>
     props.color === "dark"
       ? props.theme.colors.primary.dark
-      : props.theme.colors.primary.primary};
+      : props.theme.colors.primary.light};
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 5px;
