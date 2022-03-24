@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../../../components/Button/Button";
 import Content from "../../../components/Typography/Content";
 import HeroImage from "./HeroImage";
+import circle from "../../../assets/shared/desktop/bg-pattern-small-circle.svg";
 
 type Props = {};
 
@@ -17,7 +18,7 @@ const Hero = (props: Props) => {
 
   return (
     <StyledHero>
-      <Content heading={ heading } paragraph={ paragraph } />
+      <Content heading={ heading } variant="h1" paragraph={ paragraph } />
       <Button to="/about" variant="light">Learn More</Button>
       <HeroImage />
     </StyledHero>
@@ -27,6 +28,9 @@ const Hero = (props: Props) => {
 const StyledHero = styled.section`
   align-items: center;
   background-color: ${(props) => props.theme.colors.primary.main};
+  background-image: url(${circle});
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
