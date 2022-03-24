@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 type Props = {
   children: React.ReactNode
+  className?: string
 }
 
-const Container = ({children}: Props) => {
+const Container = ({children, className}: Props) => {
   return (
-    <StyledContainer>{children}</StyledContainer>
+    <StyledContainer className={className}>{children}</StyledContainer>
   )
 }
 

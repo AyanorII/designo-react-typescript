@@ -21,7 +21,7 @@ const features: FeatureInterface[] = [
     title: "Friendly",
     description:
       "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
-    icon: "/home/desktop/illustration-passionate.svg",
+    icon: "/home/desktop/illustration-friendly.svg",
   },
 ];
 const Features = () => {

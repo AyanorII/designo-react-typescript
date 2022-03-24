@@ -1,11 +1,11 @@
 import darkLogo from "../../assets/shared/desktop/logo-dark.png";
 import lightLogo from "../../assets/shared/desktop/logo-light.png";
 
-type Props = {
+type LogoProps = {
   variant: "dark" | "light";
 };
 
-const Logo = ({ variant }: Props) => {
+const Logo = ({ variant }: LogoProps) => {
   return variant === "dark" ? (
     <img src={darkLogo} alt="logo"  width="200px"/>
   ) : (

@@ -34,15 +34,16 @@ export default Jumbotron;
 
 const StyledContainer = styled(Container)`
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -475px;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const StyledJumbotron = styled(Card)`
   gap: 2rem;
   background-color: ${(props) => props.theme.colors.primary.main};
   background-image: url(${background});
-  background-size: 75%;
+  background-size: 85%;
   background-position: 0% 50%;
   padding: 4rem 1.5rem;
 `;

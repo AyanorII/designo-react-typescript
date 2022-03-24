@@ -27,4 +27,8 @@ export default createGlobalStyle`
   ul, li, ol {
     list-style: none;
   }
+
+  main {
+    position: relative;
+  }
 `;

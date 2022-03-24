@@ -20,7 +20,7 @@ const theme: ThemeType = {
     primary: {
       main: "#E7816B",
       dark: "#1D1C1E",
-      light: "#FFF",
+      light: "#FFFFFF",
     },
     secondary: {
       main: "#FFAD9B",
