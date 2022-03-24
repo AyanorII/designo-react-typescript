@@ -9,7 +9,7 @@ const Feature = ({title, description, icon}: FeatureInterface) => {
   return (
     <StyledFeature>
       <Icon src={icon}/>
-      <Heading variant="h2">{ title }</Heading>
+      <Heading variant="h2" color="dark">{ title }</Heading>
       <Paragraph color="dark">{description}</Paragraph>
     </StyledFeature>
   )

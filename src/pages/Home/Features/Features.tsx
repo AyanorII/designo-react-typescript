@@ -32,13 +32,11 @@ const Features = () => {
           const { title, description, icon } = feature;
 
           return (
-            <li>
+            <li key={title}>
               <Feature
-                key={title}
-                title={title}
-                description={description}
-                icon={icon}
-              />
+                title={ title }
+                description={ description }
+                icon={ icon } />
             </li>
           );
         })}

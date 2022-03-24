@@ -2,24 +2,24 @@ import React from 'react'
 import styled from 'styled-components';
 import Heading from './Heading';
 import Paragraph from './Paragraph';
+import HeadingInterface from "../../modules/interfaces/HeadingInterface";
 
-type Props = {
+interface ContentInterface extends Omit<HeadingInterface, "children"> {
   heading: string;
   paragraph: string;
+  children?: string
 }
 
-const Content = ({heading, paragraph}: Props) => {
+const Content = ({ heading, variant, paragraph, color }: ContentInterface) => {
   return (
     <ContentContainer>
-      <Heading variant="h1">
+      <Heading variant={variant} color={color}>
         {heading}
       </Heading>
-      <Paragraph color="light">
-        {paragraph}
-      </Paragraph>
+      <Paragraph color="light">{paragraph}</Paragraph>
     </ContentContainer>
   );
-}
+};
 
 export default Content
 

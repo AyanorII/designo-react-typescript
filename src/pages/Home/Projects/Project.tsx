@@ -3,31 +3,32 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import LinkWithImageInterface from "../../../modules/interfaces/LinkWithImageInterface";
 import arrow from "../../../assets/shared/desktop/icon-right-arrow.svg";
+import Card from "../../../components/Card/Card";
 
 const Project = ({ href, text, images }: LinkWithImageInterface) => {
   return (
-    <Wrapper to={href} images={images} text={text} href={href}>
-      <Content>
-        <div>
-          <p>{text}</p>
-          <span>View Projects</span>
-        </div>
-      </Content>
-    </Wrapper>
+    <Card>
+      <Wrapper to={href} images={images} text={text} href={href}>
+        <Content>
+          <div>
+            <p>{text}</p>
+            <span>View Projects</span>
+          </div>
+        </Content>
+      </Wrapper>
+    </Card>
   );
 };
 
 export default Project;
 
 const Wrapper = styled(NavLink)<LinkWithImageInterface>`
-  border-radius: 8px;
   background-image: url(${(props) => require(`../../../assets/home/${props.images.mobile}`)});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
   height: 250px;
-  overflow: hidden;
   place-items: center;
   position: relative;
   width: 100%;
