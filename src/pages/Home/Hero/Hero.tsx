@@ -18,26 +18,35 @@ const Hero = (props: Props) => {
 
   return (
     <StyledHero>
-      <Content heading={ heading } variant="h1" paragraph={ paragraph } />
-      <Button to="/about" variant="light">Learn More</Button>
+      <div>
+        <Content heading={heading} variant="h1" paragraph={paragraph} />
+        <Button to="/about" variant="light">
+          Learn More
+        </Button>
+      </div>
       <HeroImage />
     </StyledHero>
   );
 };
 
 const StyledHero = styled.section`
-  align-items: center;
   background-color: ${(props) => props.theme.colors.primary.main};
   background-image: url(${circle});
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
   padding: 5rem 6.4% 28rem;
   position: relative;
   overflow: hidden;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+  }
 `;
 
 export default Hero;

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
 import Nav from '../Nav/Nav';
@@ -10,6 +10,10 @@ interface Props {
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = isNavOpen ? 'hidden' : 'unset'
+  }, [isNavOpen])
 
   const toggleMenu = (): void => {
     setIsNavOpen(prev => !prev)
