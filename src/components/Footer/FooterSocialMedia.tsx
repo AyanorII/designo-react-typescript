@@ -35,8 +35,7 @@ const FooterSocialMedia = () => {
       {links.map((link) => {
         const { icon, url } = link;
         return (
-          <li>
-            {" "}
+          <li key={url}>
             <a href={url}>
               <img src={icon} alt="social media" />
             </a>

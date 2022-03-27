@@ -28,6 +28,7 @@ const FooterContactList = (props: Props) => {
         const { heading, description } = contact;
         return (
           <FooterContactInfo
+            key={heading}
             heading={heading}
             firstLine={description.firstLine}
             secondLine={description.secondLine}
