@@ -44,6 +44,14 @@ const StyledUl = styled.ul`
   padding: 3rem 1.5rem;
   text-align: left;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    color: ${props => props.theme.colors.primary.dark};
+    flex-direction: row;
+    font-size: 0.875rem;
+    padding: 0;
+    gap: 2.625rem;
+  }
 `;
 
 export default NavbarLinks;

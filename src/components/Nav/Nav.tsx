@@ -23,6 +23,11 @@ const StyledNav = styled.nav<NavProps>`
   transform: translateY(${props => props.isNavOpen ? "108px" : "-400px"});
   transition: transform 0.35s ease-in-out;
 
+  @media (min-width: 768px) {
+    position: unset;
+    transform: unset;
+    background: unset;
+  }
 `;
 
 export default Nav;

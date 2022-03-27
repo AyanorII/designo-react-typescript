@@ -23,6 +23,10 @@ const Button = styled.button<Props>`
   padding: 8px;
   background: url(${(props) => (props.isNavOpen ? close : hamburger)}) no-repeat
     center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export default NavButton;
