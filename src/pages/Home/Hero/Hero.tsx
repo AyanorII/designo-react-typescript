@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import HeroImage from "./HeroImage";
 import Button from "../../../components/Button/Button";
 import Content from "../../../components/Typography/Content";
-import HeroImage from "./HeroImage";
 import circle from "../../../assets/shared/desktop/bg-pattern-small-circle.svg";
+import Card from "../../../components/Card/Card";
 
 type Props = {};
 
@@ -17,15 +18,23 @@ const Hero = (props: Props) => {
   const { heading, paragraph } = content;
 
   return (
-    <StyledHero>
-      <div>
-        <Content heading={heading} variant="h1" paragraph={paragraph} />
-        <Button to="/about" variant="light">
-          Learn More
-        </Button>
-      </div>
-      <HeroImage />
-    </StyledHero>
+    <Card>
+      <StyledHero>
+        <div>
+          <Content
+            heading={ heading }
+            headingColor="primary"
+            variant="h1"
+            paragraph={paragraph}
+            paragraphColor="light"
+          />
+          <Button to="/about" variant="light">
+            Learn More
+          </Button>
+        </div>
+        <HeroImage />
+      </StyledHero>
+    </Card>
   );
 };
 
@@ -37,6 +46,10 @@ const StyledHero = styled.section`
   padding: 5rem 6.4% 28rem;
   position: relative;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding: 3.75rem 3.75rem 28rem;
+  }
 
   & > div {
     display: flex;

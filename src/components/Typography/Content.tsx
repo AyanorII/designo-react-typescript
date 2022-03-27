@@ -1,30 +1,44 @@
-import React from 'react'
-import styled from 'styled-components';
-import Heading from './Heading';
-import Paragraph from './Paragraph';
-import HeadingInterface from "../../modules/interfaces/HeadingInterface";
+import React from "react";
+import styled from "styled-components";
+import Heading from "./Heading";
+import Paragraph from "./Paragraph";
+import HeadingInterface, {
+  HeadingColor,
+} from "../../modules/interfaces/HeadingInterface";
+import { ParagraphColor } from "../../modules/interfaces/ParagraphInterface";
 
-interface ContentInterface extends Omit<HeadingInterface, "children"> {
+type ContentInterface = {
   heading: string;
   paragraph: string;
-  children?: string
-}
+  headingColor: HeadingColor;
+  paragraphColor: ParagraphColor;
+} & HeadingInterface;
 
-const Content = ({ heading, variant, paragraph, color }: ContentInterface) => {
+const Content = ({
+  heading,
+  variant,
+  paragraph,
+  headingColor,
+  paragraphColor,
+}: ContentInterface) => {
   return (
     <ContentContainer>
-      <Heading variant={variant} color={color}>
+      <Heading variant={variant} color={headingColor}>
         {heading}
       </Heading>
-      <Paragraph color="light">{paragraph}</Paragraph>
+      <Paragraph color={paragraphColor}>{paragraph}</Paragraph>
     </ContentContainer>
   );
 };
 
-export default Content
+export default Content;
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+  }
 `;

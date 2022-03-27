@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import HeadingInterface from "../../modules/interfaces/HeadingInterface";
 
-const Heading = ({ children, variant, color }: HeadingInterface) => {
+const Heading: React.FC<HeadingInterface> = ({
+  children,
+  variant,
+  color,
+}) => {
   return variant === "h1" ? (
     <StyledH1 variant={variant} color={color}>
       {children}
@@ -20,6 +24,11 @@ const StyledH1 = styled.h1<HeadingInterface>`
   font-weight: normal;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 `;
 
 const StyledH2 = styled.h2<HeadingInterface>`

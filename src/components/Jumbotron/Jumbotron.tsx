@@ -17,9 +17,11 @@ const Jumbotron = (props: Props) => {
     <StyledContainer>
       <StyledJumbotron>
         <Content
-          heading={heading}
+          heading={ heading }
+          headingColor="primary"
           variant="h2"
-          paragraph={paragraph}
+          paragraph={ paragraph }
+          paragraphColor="light"
           color="primary"
         />
         <Button to="/contact" variant="light">
