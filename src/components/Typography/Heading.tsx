@@ -23,7 +23,6 @@ const StyledH1 = styled.h1<HeadingInterface>`
   font-size: 2rem;
   font-weight: normal;
   line-height: 36px;
-  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -40,7 +39,6 @@ const StyledH2 = styled.h2<HeadingInterface>`
   font-weight: 500;
   letter-spacing: 5px;
   line-height: 26px;
-  text-align: center;
   text-transform: uppercase;
 `;
 

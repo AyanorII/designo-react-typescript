@@ -13,7 +13,6 @@ const StyledParagraph = styled.p<ParagraphInterface>`
     props.color === "light"
       ? props.theme.colors.primary.light
       : props.theme.colors.primary.dark};
-  text-align: center;
   font-size: 0.9375rem;
   line-height: 25px;
   font-weight: normal;
