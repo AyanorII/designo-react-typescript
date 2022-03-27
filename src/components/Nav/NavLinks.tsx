@@ -52,6 +52,31 @@ const StyledUl = styled.ul`
     padding: 0;
     gap: 2.625rem;
   }
+
+  @media (min-width: 1024px) {
+
+    a {
+      position: relative;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        transition: all 0.4s;
+        background: black;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+  }
+
 `;
 
 export default NavbarLinks;
