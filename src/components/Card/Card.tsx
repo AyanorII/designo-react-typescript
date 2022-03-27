@@ -14,7 +14,6 @@ export default Card;
 
 const StyledCard = styled.div<Props>`
   border-radius: 8px;
-  box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: grid;
   place-items: center;

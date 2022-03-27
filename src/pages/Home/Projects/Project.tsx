@@ -68,6 +68,11 @@ const Content = styled.div`
     line-height: 36px;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
   span {
