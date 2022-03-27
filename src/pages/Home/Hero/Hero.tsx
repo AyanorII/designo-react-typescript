@@ -20,7 +20,7 @@ const Hero = (props: Props) => {
   return (
     <Card>
       <StyledHero>
-        <div>
+        <Wrapper>
           <Content
             heading={ heading }
             headingColor="primary"
@@ -31,7 +31,7 @@ const Hero = (props: Props) => {
           <Button to="/about" variant="light">
             Learn More
           </Button>
-        </div>
+        </Wrapper>
         <HeroImage />
       </StyledHero>
     </Card>
@@ -51,14 +51,28 @@ const StyledHero = styled.section`
     padding: 3.75rem 3.75rem 28rem;
   }
 
-  & > div {
+  @media (min-width: 1440px) {
+    padding: 9.0625rem 50% 9.0625rem 8%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
-    position: relative;
-    z-index: 3;
+  }
+
+  @media (min-width: 1920px) {
+    padding-left: 8%;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+
+  @media (min-width: 1440px) {
+    align-items: flex-start;
   }
 `;
 

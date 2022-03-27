@@ -17,4 +17,9 @@ const Img = styled.img`
   bottom: -375px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: 1440px) {
+    left: 75%;
+    bottom: -275px;
+  }
 `;

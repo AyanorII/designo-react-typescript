@@ -7,7 +7,7 @@ import Projects from "./Projects/Projects";
 const Home = () => {
   return (
     <div>
-      <Container>
+      <Container className="full">
         <Hero />
       </Container>
       <Projects />
