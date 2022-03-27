@@ -53,7 +53,15 @@ const StyledHeader = styled.header<Props>`
     padding: 4rem 2.5rem;
   }
 
+  @media (min-width: 1024px) {
+    padding-inline: 7.5rem;
+  }
+
   @media (min-width: 1440px) {
-    padding: 4rem 10.3125rem;
+    padding-inline: 10.3125rem;
+  }
+
+  @media (min-width: 1920px) {
+    padding-inline: 21rem;
   }
 `;
