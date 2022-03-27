@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "../../../components/Icon/Icon";
 import Content from "../../../components/Typography/Content";
-import Heading from "../../../components/Typography/Heading";
-import Paragraph from "../../../components/Typography/Paragraph";
 import FeatureInterface from "../../../modules/interfaces/FeatureInterface";
+import background from "../../../assets/shared/desktop/bg-pattern-small-circle.svg"
 
 const Feature = ({ title, description, icon }: FeatureInterface) => {
   return (
@@ -30,6 +29,11 @@ const StyledFeature = styled.div`
   justify-items: center;
   gap: 2rem;
   text-align: center;
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 60%;
+  padding-top: 1rem;
 
   img {
     margin-bottom: 1rem;
@@ -37,9 +41,18 @@ const StyledFeature = styled.div`
 
   @media (min-width: 768px) {
     grid-template-columns: auto 1fr;
+    gap: 6.25%;
 
     h2, p {
       text-align: left;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr;
+
+    h2, p {
+      text-align: center;
     }
   }
 `;

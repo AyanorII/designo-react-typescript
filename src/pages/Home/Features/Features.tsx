@@ -52,4 +52,8 @@ const StyledUl = styled.ul`
   flex-direction: column;
   gap: 5rem;
   margin-bottom: 19.4375rem;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+  }
 `;
