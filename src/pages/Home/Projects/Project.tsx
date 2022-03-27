@@ -38,7 +38,8 @@ const Wrapper = styled(NavLink)<LinkWithImageInterface>`
     position: absolute;
     inset: 0;
     background-color: #000000;
-    opacity: 0.65;
+    opacity: 0.75;
+    transition: all 0.5s;
   }
 
   @media (min-width: 768px) {
@@ -47,6 +48,14 @@ const Wrapper = styled(NavLink)<LinkWithImageInterface>`
 
   @media (min-width: 1440px) {
     background-image: url(${(props) => require(`../../../assets/home/${props.images.desktop.small}`)});
+    height: 300px;
+
+
+    &:hover {
+      &::before {
+        background-color: ${(props) => props.theme.colors.primary.main};
+      }
+    }
   }
 `;
 

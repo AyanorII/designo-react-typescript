@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import Container from "../../../components/Container";
 import LinkWithImageInterface from "../../../modules/interfaces/LinkWithImageInterface";
 import Project from "./Project";
@@ -45,7 +45,7 @@ const Projects = () => {
   return (
     <Container>
       <StyledUl>
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           const { href, text, images } = project;
 
           return (
@@ -64,6 +64,21 @@ const StyledUl = styled.ul`
   flex-direction: column;
   gap: 1.5rem;
   margin: 7.5rem 0;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    li:first-of-type {
+      grid-row: 1 / 3;
+
+      & > div,
+      a {
+        height: 100%;
+      }
+    }
+  }
 `;
 
 export default Projects;
