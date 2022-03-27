@@ -54,4 +54,9 @@ const StyledUl = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+
+  @media (min-width: 768px) {
+    grid-area: social;
+    justify-self: end;
+  }
 `;

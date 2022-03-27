@@ -26,4 +26,8 @@ const StyledLi = styled.li`
   line-height: 30px;
   opacity: 0.5;
   text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;

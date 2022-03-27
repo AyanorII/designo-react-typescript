@@ -45,4 +45,11 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    grid-area: info;
+    justify-self: start;
+    gap: 4rem;
+  }
 `;
