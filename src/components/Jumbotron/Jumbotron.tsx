@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Card from "../Card/Card";
 import Container from "../Container";
 import Content from "../Typography/Content";
-import background from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
+import background from "../../assets/shared/desktop/bg-pattern-three-circles.svg";
 import Button from "../Button/Button";
 
 type Props = {};
@@ -48,4 +48,28 @@ const StyledJumbotron = styled(Card)`
   background-size: 85%;
   background-position: 0% 50%;
   padding: 4rem 1.5rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 36px;
+    text-transform: unset;
+  }
+
+  @media (min-width: 768px) {
+    padding: 3.5625rem 20%;
+
+    h2{
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 4.5rem 5.9375rem;
+
+    a {
+      justify-self: end;
+    }
+  }
 `;

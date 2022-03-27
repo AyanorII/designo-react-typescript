@@ -41,4 +41,8 @@ const ContentContainer = styled.div`
   @media (min-width: 768px) {
     gap: 1.5rem;
   }
+
+  @media (min-width: 1440px) {
+    text-align: left;
+  }
 `;
