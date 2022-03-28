@@ -4,12 +4,12 @@ import background from "../../assets/shared/desktop/bg-pattern-small-circle.svg"
 import Card from "../Card/Card";
 import Content from "../Typography/Content";
 
-type Props = {
+export type IntroProps = {
   heading: string;
   paragraph: string;
 };
 
-const Intro = ({ heading, paragraph }: Props) => {
+const Intro = ({ heading, paragraph }: IntroProps) => {
   return (
     <StyledIntro>
       <Content

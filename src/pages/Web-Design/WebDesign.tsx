@@ -4,16 +4,18 @@ import Container from "../../components/Container";
 import Intro from "../../components/Intro/Intro";
 import Projects from "../../components/Projects/Projects";
 import CategoryInterface from "../../modules/interfaces/CategoryInterface";
+import { IntroProps } from "../../components/Intro/Intro";
+import { ProjectProps } from "../../components/Projects/Project";
 
 type Props = {};
 
-const intro = {
+const intro: IntroProps = {
   heading: "Web Design",
   paragraph:
     "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
 };
 
-const projects = [
+const projects: ProjectProps[] = [
   {
     title: "Express",
     description: "A multi-carrier shipping website for ecommerce businesses.",

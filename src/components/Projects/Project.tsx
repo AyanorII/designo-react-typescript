@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Card from "../Card/Card";
 import Content from "../Typography/Content";
 
-type ProjectProps = {
+export type ProjectProps = {
   img: string;
   title: string;
   description: string;
