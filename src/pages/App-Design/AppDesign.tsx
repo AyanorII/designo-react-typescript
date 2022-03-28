@@ -54,9 +54,9 @@ const categories: CategoryInterface[] = [
       tablet: "tablet/image-web-design.jpg",
       desktop: {
         small: "desktop/image-web-design-small.jpg",
-        large: "desktop/image-web-design-large.jpg"
-      }
-    }
+        large: "desktop/image-web-design-large.jpg",
+      },
+    },
   },
   {
     title: "Graphic Design",
@@ -66,9 +66,9 @@ const categories: CategoryInterface[] = [
       tablet: "tablet/image-graphic-design.jpg",
       desktop: {
         small: "desktop/image-graphic-design.jpg",
-      }
-    }
-  }
+      },
+    },
+  },
 ];
 
 const AppDesign = (props: Props) => {
@@ -76,11 +76,9 @@ const AppDesign = (props: Props) => {
 
   return (
     <>
-      <Container className="full">
-        <Intro heading={heading} paragraph={paragraph} />
-      </Container>
+      <Intro heading={heading} paragraph={paragraph} />
       <Projects projects={projects} />
-      <Categories categories={categories}/>
+      <Categories categories={categories} />
     </>
   );
 };

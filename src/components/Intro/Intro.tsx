@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import background from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
 import Card from "../Card/Card";
+import Container from "../Container";
 import Content from "../Typography/Content";
 
 export type IntroProps = {
@@ -11,15 +12,17 @@ export type IntroProps = {
 
 const Intro = ({ heading, paragraph }: IntroProps) => {
   return (
-    <StyledIntro>
-      <Content
-        heading={heading}
-        headingColor="primary"
-        variant="h1"
-        paragraph={paragraph}
-        paragraphColor="light"
-      />
-    </StyledIntro>
+    <Container className="full">
+      <StyledIntro>
+        <Content
+          heading={heading}
+          headingColor="primary"
+          variant="h1"
+          paragraph={paragraph}
+          paragraphColor="light"
+        />
+      </StyledIntro>
+    </Container>
   );
 };
 

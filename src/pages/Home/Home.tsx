@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "../../components/Container";
 import Features from "./Features/Features";
 import Hero from "./Hero/Hero";
 import Categories from "../../components/Categories/Categories";
@@ -15,8 +14,8 @@ const categories: CategoryInterface[] = [
       desktop: {
         small: "desktop/image-web-design-small.jpg",
         large: "desktop/image-web-design-large.jpg",
-      }
-    }
+      },
+    },
   },
   {
     title: "App Design",
@@ -26,8 +25,8 @@ const categories: CategoryInterface[] = [
       tablet: "tablet/image-app-design.jpg",
       desktop: {
         small: "desktop/image-app-design.jpg",
-      }
-    }
+      },
+    },
   },
   {
     title: "Graphic Design",
@@ -37,20 +36,18 @@ const categories: CategoryInterface[] = [
       tablet: "tablet/image-graphic-design.jpg",
       desktop: {
         small: "desktop/image-graphic-design.jpg",
-      }
-    }
-  }
-]
+      },
+    },
+  },
+];
 
 const Home = () => {
   return (
-    <div>
-      <Container className="full">
-        <Hero />
-      </Container>
-      <Categories categories={categories}/>
+    <>
+      <Hero />
+      <Categories categories={categories} />
       <Features />
-    </div>
+    </>
   );
 };
 

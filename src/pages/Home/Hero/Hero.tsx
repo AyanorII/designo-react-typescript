@@ -5,6 +5,7 @@ import Button from "../../../components/Button/Button";
 import Content from "../../../components/Typography/Content";
 import circle from "../../../assets/shared/desktop/bg-pattern-small-circle.svg";
 import Card from "../../../components/Card/Card";
+import Container from "../../../components/Container";
 
 type Props = {};
 
@@ -18,23 +19,25 @@ const Hero = (props: Props) => {
   const { heading, paragraph } = content;
 
   return (
-    <Card>
-      <StyledHero>
-        <Wrapper>
-          <Content
-            heading={ heading }
-            headingColor="primary"
-            variant="h1"
-            paragraph={paragraph}
-            paragraphColor="light"
-          />
-          <Button to="/about" variant="light">
-            Learn More
-          </Button>
-        </Wrapper>
-        <HeroImage />
-      </StyledHero>
-    </Card>
+    <Container className="full">
+      <Card>
+        <StyledHero>
+          <Wrapper>
+            <Content
+              heading={heading}
+              headingColor="primary"
+              variant="h1"
+              paragraph={paragraph}
+              paragraphColor="light"
+            />
+            <Button to="/about" variant="light">
+              Learn More
+            </Button>
+          </Wrapper>
+          <HeroImage />
+        </StyledHero>
+      </Card>
+    </Container>
   );
 };
 
