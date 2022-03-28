@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Card from "../Card/Card";
 import Container from "../Container";
 import Content from "../Typography/Content";
-import background from "../../assets/shared/desktop/bg-pattern-three-circles.svg";
+import background from "../../assets/shared/desktop/bg-pattern-call-to-action.svg";
 import Button from "../Button/Button";
 
 type Props = {};

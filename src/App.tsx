@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Jumbotron from "./components/Jumbotron/Jumbotron";
+import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "./components/Footer/Footer";
 import WebDesign from "./pages/Web-Design/WebDesign";
 
@@ -21,7 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/web-design" element={<WebDesign />} />
           </Routes>
-          <Jumbotron />
+          <CallToAction />
         </main>
         <Footer />
       </Router>
