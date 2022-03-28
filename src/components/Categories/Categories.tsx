@@ -16,7 +16,15 @@ const Categories = ({ categories }: CategoriesInterface) => {
           const { href, title, images } = project;
 
           return (
-            <li key={title} className={title.includes("Web") ? "tall" : ""}>
+            <li
+              key={title}
+              className={
+                title.includes("Web") &&
+                window.location.pathname === "/"
+                  ? "tall"
+                  : ""
+              }
+            >
               <Project href={href} title={title} images={images} />
             </li>
           );
