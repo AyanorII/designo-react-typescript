@@ -1,5 +1,6 @@
 import React from "react";
 import Categories from "../../components/Categories/Categories";
+import Container from "../../components/Container";
 import Intro from "../../components/Intro/Intro";
 import Projects from "../../components/Projects/Projects";
 import CategoryInterface from "../../modules/interfaces/CategoryInterface";
@@ -79,11 +80,13 @@ const WebDesign = (props: Props) => {
   const { heading, paragraph } = intro;
 
   return (
-    <div>
-      <Intro heading={heading} paragraph={paragraph} />
+    <>
+      <Container className="full">
+        <Intro heading={heading} paragraph={paragraph} />
+      </Container>
       <Projects projects={projects} />
       <Categories categories={categories} />
-    </div>
+    </>
   );
 };
 
