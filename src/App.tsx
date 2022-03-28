@@ -10,6 +10,7 @@ import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "./components/Footer/Footer";
 import WebDesign from "./pages/Web-Design/WebDesign";
 import AppDesign from "./pages/App-Design/AppDesign";
+import GraphicDesign from "./pages/Graphic-Design/GraphicDesign";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/web-design" element={<WebDesign />} />
             <Route path="/app-design" element={<AppDesign />} />
+            <Route path="/graphic-design" element={<GraphicDesign />} />
           </Routes>
           <CallToAction />
         </main>
