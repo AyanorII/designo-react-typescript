@@ -51,7 +51,7 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  margin-bottom: 19.4375rem;
+  margin-top: 7rem;
 
   @media (min-width: 1440px) {
     flex-direction: row;

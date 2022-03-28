@@ -35,10 +35,8 @@ const Jumbotron = (props: Props) => {
 export default Jumbotron;
 
 const StyledContainer = styled(Container)`
-  position: absolute;
-  bottom: -475px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 150px;
 `;
 
 const StyledJumbotron = styled(Card)`
