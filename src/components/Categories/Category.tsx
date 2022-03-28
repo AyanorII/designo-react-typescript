@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import LinkWithImageInterface from "../../../modules/interfaces/LinkWithImageInterface";
-import arrow from "../../../assets/shared/desktop/icon-right-arrow.svg";
-import Card from "../../../components/Card/Card";
+import LinkWithImageInterface from "../../modules/interfaces/CategoryInterface";
+import arrow from "../../assets/shared/desktop/icon-right-arrow.svg";
+import Card from "../Card/Card";
 
-const Project = ({ href, text, images }: LinkWithImageInterface) => {
+const Category = ({ href, title, images }: LinkWithImageInterface) => {
   return (
     <Card>
-      <Wrapper to={href} images={images} text={text} href={href}>
+      <Wrapper to={href} images={images} title={title} href={href}>
         <Content>
           <div>
-            <p>{text}</p>
+            <p>{title}</p>
             <span>View Projects</span>
           </div>
         </Content>
@@ -20,10 +20,10 @@ const Project = ({ href, text, images }: LinkWithImageInterface) => {
   );
 };
 
-export default Project;
+export default Category;
 
 const Wrapper = styled(NavLink)<LinkWithImageInterface>`
-  background-image: url(${(props) => require(`../../../assets/home/${props.images.mobile}`)});
+  background-image: url(${(props) => require(`../../assets/home/${props.images.mobile}`)});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,11 +43,11 @@ const Wrapper = styled(NavLink)<LinkWithImageInterface>`
   }
 
   @media (min-width: 768px) {
-    background-image: url(${(props) => require(`../../../assets/home/${props.images.tablet}`)});
+    background-image: url(${(props) => require(`../../assets/home/${props.images.tablet}`)});
   }
 
   @media (min-width: 1440px) {
-    background-image: url(${(props) => require(`../../../assets/home/${props.images.desktop.small}`)});
+    background-image: url(${(props) => require(`../../assets/home/${props.images.desktop.small}`)});
     height: 300px;
 
 
