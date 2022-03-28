@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "./components/Footer/Footer";
 import WebDesign from "./pages/Web-Design/WebDesign";
+import AppDesign from "./pages/App-Design/AppDesign";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/web-design" element={<WebDesign />} />
+            <Route path="/app-design" element={<AppDesign />} />
           </Routes>
           <CallToAction />
         </main>
