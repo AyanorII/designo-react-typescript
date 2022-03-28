@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Icon from "../../../components/Icon/Icon";
 import Content from "../../../components/Typography/Content";
 import FeatureInterface from "../../../modules/interfaces/FeatureInterface";
-import background from "../../../assets/shared/desktop/bg-pattern-small-circle.svg"
 
 const Feature = ({ title, description, icon }: FeatureInterface) => {
   return (
@@ -29,10 +28,6 @@ const StyledFeature = styled.div`
   justify-items: center;
   gap: 2rem;
   text-align: center;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 60%;
   padding-top: 1rem;
 
   img {
