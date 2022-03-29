@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import WebDesign from "./pages/Web-Design/WebDesign";
 import AppDesign from "./pages/App-Design/AppDesign";
 import GraphicDesign from "./pages/Graphic-Design/GraphicDesign";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/web-design" element={<WebDesign />} />
             <Route path="/app-design" element={<AppDesign />} />
             <Route path="/graphic-design" element={<GraphicDesign />} />
+            <Route path="/about" element={<About />} />
           </Routes>
           <CallToAction />
         </main>
