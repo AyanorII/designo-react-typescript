@@ -2,20 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import HeadingInterface from "../../modules/interfaces/HeadingInterface";
 
-const Heading: React.FC<HeadingInterface> = ({
-  children,
-  variant,
-  color,
-}) => {
-  return variant === "h1" ? (
-    <StyledH1 variant={variant} color={color}>
-      {children}
-    </StyledH1>
-  ) : (
-    <StyledH2 variant={variant} color={color}>
-      {children}
-    </StyledH2>
-  );
+const Heading: React.FC<HeadingInterface> = ({ children, variant, color }) => {
+  if (variant === "h1") {
+    return (
+      <StyledH1 variant={variant} color={color}>
+        {children}
+      </StyledH1>
+    );
+  } else if (variant === "h2") {
+    return (
+      <StyledH2 variant={variant} color={color}>
+        {children}
+      </StyledH2>
+    );
+  } else {
+    return (
+      <StyledH3 variant={variant} color="dark">
+        {children}
+      </StyledH3>
+    );
+  }
 };
 
 const StyledH1 = styled.h1<HeadingInterface>`
@@ -39,6 +45,14 @@ const StyledH2 = styled.h2<HeadingInterface>`
   font-weight: 500;
   letter-spacing: 5px;
   line-height: 26px;
+  text-transform: uppercase;
+`;
+
+const StyledH3 = styled.h3<HeadingInterface>`
+  color: ${(props) => props.theme.colors.primary.dark};
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
 `;
 
