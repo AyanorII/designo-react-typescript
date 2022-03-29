@@ -7,11 +7,12 @@ import HeadingInterface, {
 } from "../../modules/interfaces/HeadingInterface";
 import { ParagraphColor } from "../../modules/interfaces/ParagraphInterface";
 
-type ContentInterface = {
+export type ContentInterface = {
   heading: string;
   paragraph: string;
   headingColor: HeadingColor;
   paragraphColor: ParagraphColor;
+  className?: string;
 } & HeadingInterface;
 
 const Content = ({
@@ -20,20 +21,21 @@ const Content = ({
   paragraph,
   headingColor,
   paragraphColor,
+  className,
 }: ContentInterface) => {
   return (
-    <ContentContainer>
+    <ContentWrapper className={className}>
       <Heading variant={variant} color={headingColor}>
         {heading}
       </Heading>
       <Paragraph color={paragraphColor}>{paragraph}</Paragraph>
-    </ContentContainer>
+    </ContentWrapper>
   );
 };
 
 export default Content;
 
-const ContentContainer = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -42,7 +44,7 @@ const ContentContainer = styled.div`
     gap: 1.5rem;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1024px) {
     text-align: left;
   }
 `;
