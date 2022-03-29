@@ -19,6 +19,10 @@ const StyledContainer = styled.div`
   &.full {
     @media (max-width: 768px) {
       width: 100%;
+
+      & > div {
+        border-radius: 0;
+      }
     }
   }
 
