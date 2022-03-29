@@ -83,9 +83,7 @@ const WebDesign = (props: Props) => {
 
   return (
     <>
-      <Container className="full">
-        <Intro heading={heading} paragraph={paragraph} />
-      </Container>
+      <Intro heading={heading} paragraph={paragraph} />
       <Projects projects={projects} />
       <Categories categories={categories} />
     </>
