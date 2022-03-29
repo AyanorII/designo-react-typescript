@@ -18,7 +18,7 @@ const Project = ({ img, title, description }: ProjectProps) => {
         headingColor="primary"
         variant="h2"
         paragraph={description}
-        paragraphColor="light"
+        paragraphColor="dark"
       />
     </StyledCard>
   );
@@ -27,7 +27,7 @@ const Project = ({ img, title, description }: ProjectProps) => {
 export default Project;
 
 const StyledCard = styled(Card)`
-  background-color: ${(props) => props.theme.colors.secondary.main};
+  background-color: ${(props) => props.theme.colors.secondary.main}80;
   grid-template-rows: auto 150px;
   transition: all 0.25s;
   cursor: pointer;
@@ -51,5 +51,9 @@ const StyledCard = styled(Card)`
     img {
       transform: scale(1.07);
     }
+  }
+
+  h2 {
+    color: ${(props) => props.theme.colors.primary.main};
   }
 `;
