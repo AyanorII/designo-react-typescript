@@ -2,11 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import Container from "../Container";
 import Logo from "../Logo/Logo";
-import FooterContactList from "./FooterContactList";
+import ContactList from "../ContactInfo/ContactList";
 import FooterLinks from "./FooterLinks";
 import FooterSocialMedia from "./FooterSocialMedia";
 
 type Props = {};
+
+const contacts = [
+  {
+    heading: "Designo Central OFfice",
+    firstLine: "3886 Wellington Street ",
+    secondLine: "Toronto, Ontario M9C 3J5",
+  },
+  {
+    heading: "Contact Us (Central Office)",
+    firstLine: "P : +1 253-863-8967",
+    secondLine: "M : contact@designo.co",
+  },
+];
 
 const Footer = (props: Props) => {
   return (
@@ -14,7 +27,7 @@ const Footer = (props: Props) => {
       <StyledContainer>
         <Logo variant="light" />
         <FooterLinks />
-        <FooterContactList />
+        <ContactList contactInfo={contacts} />
         <FooterSocialMedia />
       </StyledContainer>
     </StyledFooter>
