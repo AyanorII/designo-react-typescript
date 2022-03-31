@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/designo-react-typescript/static/js/main.98fbe1aa.js",
+    "main.js": "/designo-react-typescript/static/js/main.12f8fbc1.js",
     "static/media/image-change.jpg": "/designo-react-typescript/static/media/image-change.3051c97c1dcc2c751755.jpg",
     "static/media/image-boxed-water.jpg": "/designo-react-typescript/static/media/image-boxed-water.9348f4ace8db6ac37e27.jpg",
     "static/media/image-photon.jpg": "/designo-react-typescript/static/media/image-photon.02f662d755840ae8aad5.jpg",
@@ -59,9 +59,9 @@
     "static/media/icon-error.svg": "/designo-react-typescript/static/media/icon-error.fd5e1ede84a613c61261.svg",
     "static/media/icon-hamburger.svg": "/designo-react-typescript/static/media/icon-hamburger.a39ae0d1f45acff97a9650b13149528e.svg",
     "static/media/icon-right-arrow.svg": "/designo-react-typescript/static/media/icon-right-arrow.7046cd1b7a4a6072a89674a25348f942.svg",
-    "main.98fbe1aa.js.map": "/designo-react-typescript/static/js/main.98fbe1aa.js.map"
+    "main.12f8fbc1.js.map": "/designo-react-typescript/static/js/main.12f8fbc1.js.map"
   },
   "entrypoints": [
-    "static/js/main.98fbe1aa.js"
+    "static/js/main.12f8fbc1.js"
   ]
 }
