@@ -17,12 +17,16 @@ const links: LinkInterface[] = [
   },
 ];
 
-const NavbarLinks = () => {
+type Props = {
+  closeMenu: () => void;
+}
+
+const NavbarLinks = ({closeMenu}: Props) => {
   return (
     <StyledUl>
       {links.map((link: LinkInterface) => {
         return (
-          <li key={link.text}>
+          <li key={link.text} onClick={closeMenu}>
             <NavLink key={link.text} to={link.href}>{link.text}</NavLink>
           </li>
         )
@@ -57,7 +61,7 @@ const StyledUl = styled.ul`
 
     a {
       position: relative;
-      
+
       &::after {
         content: "";
         position: absolute;

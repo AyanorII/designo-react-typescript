@@ -4,23 +4,24 @@ import NavLinks from "./NavLinks";
 
 interface NavProps {
   isNavOpen: boolean;
+  closeMenu: () => void;
 }
 
-const Nav = ({ isNavOpen }: NavProps) => {
+const Nav = ({ isNavOpen, closeMenu }: NavProps) => {
   return (
-    <StyledNav isNavOpen={isNavOpen}>
-      <NavLinks />
+    <StyledNav isNavOpen={isNavOpen} closeMenu={closeMenu}>
+      <NavLinks closeMenu={closeMenu} />
     </StyledNav>
   );
 };
 
 const StyledNav = styled.nav<NavProps>`
-  background: ${props => props.theme.colors.primary.dark};
+  background: ${(props) => props.theme.colors.primary.dark};
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateY(${props => props.isNavOpen ? "108px" : "-400px"});
+  transform: translateY(${(props) => (props.isNavOpen ? "108px" : "-400px")});
   transition: transform 0.35s ease-in-out;
 
   @media (min-width: 768px) {

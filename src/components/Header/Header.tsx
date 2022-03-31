@@ -28,7 +28,7 @@ const Header = () => {
     <ClickAwayListener onClickAway={closeMenu}>
       <StyledHeader isNavOpen={isNavOpen}>
         <Logo variant="dark" />
-        <Nav isNavOpen={isNavOpen} />
+        <Nav isNavOpen={isNavOpen} closeMenu={closeMenu}/>
         <NavButton isNavOpen={isNavOpen} toggleMenu={toggleMenu} />
       </StyledHeader>
     </ClickAwayListener>
