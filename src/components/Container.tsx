@@ -1,23 +1,39 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type Props = {
-  children: React.ReactNode
-  className?: string
-}
+  children: React.ReactNode;
+  className?: string;
+};
 
-const Container = ({children, className}: Props) => {
+const pageMotion = {
+  initial: { opacity: 0, y: "-100", scale: 0.9 },
+  animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, y: "-100", scale: 0.0, transition: { duration: 0.5 } },
+};
+
+const Container = ({ children, className }: Props) => {
+
   return (
-    <StyledContainer className={className}>{children}</StyledContainer>
-  )
-}
+    <StyledContainer
+      className={className}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageMotion}
+    >
+      {children}
+    </StyledContainer>
+  );
+};
 
-const StyledContainer = styled.div`
+const StyledContainer = styled(motion.div)`
   width: 87%;
   margin: 0 auto;
 
   &.full {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       width: 100%;
 
       & > div {
@@ -43,4 +59,4 @@ const StyledContainer = styled.div`
   }
 `;
 
-export default Container
+export default Container;
