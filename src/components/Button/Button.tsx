@@ -6,11 +6,14 @@ type Props = {
   to: string;
   children: string;
   variant: "primary" | "light";
+  className?: string;
+  button?: "button"
 };
 
-const Button = ({ variant, to, children }: Props) => {
+
+const Button = ({ variant, to, children, className, button }: Props) => {
   return (
-    <StyledButton to={to} variant={variant}>
+    <StyledButton className={className} to={to} as={button} variant={variant}>
       {children}
     </StyledButton>
   );
