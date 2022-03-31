@@ -3,27 +3,31 @@ import styled from "styled-components";
 import Container from "../../components/Container";
 import LocationIcon, { LocationIconProps } from "./LocationIcon";
 
+type Props = {
+  className?: string;
+}
+
 const locations: LocationIconProps[] = [
   {
     location: "Canada",
     src: "/shared/desktop/illustration-canada.svg",
-    href: "/location",
+    href: "/locations",
   },
   {
     location: "Australia",
     src: "/shared/desktop/illustration-australia.svg",
-    href: "/location",
+    href: "/locations",
   },
   {
     location: "United Kingdom",
     src: "/shared/desktop/illustration-united-kingdom.svg",
-    href: "/location",
+    href: "/locations",
   },
 ];
 
-const LocationList = () => {
+const LocationList = ({className}: Props) => {
   return (
-    <Container>
+    <Container className={className}>
       <StyledUl>
         {locations.map((country) => {
           const { href, src, location } = country;
