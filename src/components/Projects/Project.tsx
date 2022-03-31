@@ -34,6 +34,7 @@ const StyledCard = styled(Card)`
 
   * {
     text-align: center;
+    transition: all 0.25s;
   }
 
   img {
@@ -47,6 +48,10 @@ const StyledCard = styled(Card)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primary.main};
+
+    h2, p {
+      color: ${(props) => props.theme.colors.primary.light};
+    }
 
     img {
       transform: scale(1.07);
