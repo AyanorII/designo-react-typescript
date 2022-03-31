@@ -19,7 +19,7 @@ const Categories = ({ categories }: CategoriesInterface) => {
             <li
               key={title}
               className={
-                title.includes("Web") &&
+                title.match(/web/i) &&
                 window.location.pathname === "/"
                   ? "tall"
                   : ""
