@@ -9,6 +9,11 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Routes from "./pages/Routes";
 
+// Google Analytics
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-YRV6KLTJKH";
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
