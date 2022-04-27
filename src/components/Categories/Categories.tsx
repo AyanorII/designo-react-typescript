@@ -20,7 +20,7 @@ const Categories = ({ categories }: CategoriesInterface) => {
               key={title}
               className={
                 title.match(/web/i) &&
-                window.location.pathname === "/"
+                window.location.pathname === "/designo-react-typescript/"
                   ? "tall"
                   : ""
               }
