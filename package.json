@@ -12,6 +12,7 @@
     "@types/react": "^17.0.41",
     "@types/react-dom": "^17.0.14",
     "framer-motion": "^6.2.8",
+    "ga-4-react": "^0.1.281",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-click-away-listener": "^2.1.0",
