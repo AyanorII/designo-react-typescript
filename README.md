@@ -9,7 +9,7 @@ Link to the **[project](https://designo-react-typescript.vercel.app/)**
 
 ## Tech Stack
 
-**Client:** Next.js, Material UI
+**Client:** TypeScript, Next.js, Material UI
 
 
 ## Screenshots
