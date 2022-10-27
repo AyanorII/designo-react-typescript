@@ -2,7 +2,7 @@
 # Design Website
 
 Multi-page resposive website for a fictional design company. Built using Next.js and Material UI.
-You can check the original project idea from [Frontend Mentor](https://www.frontendmentor.io/challenges/kanban-task-management-web-app-wgQLt-HlbB).
+You can check the original project idea from [Frontend Mentor](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT).
 
 Link to the **[project](https://designo-react-typescript.vercel.app/)**
 
